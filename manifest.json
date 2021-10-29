@@ -1,0 +1,30 @@
+{
+  "name": "Welcome to the Team, Field Agent",
+  "version": "2.1",
+  "manifest_version": 2,
+  "description": "You have been chosen. You are now obligated to Secure. Contain. Protect... PROCEED TO: https://scp-wiki.wikidot.com/foundation-tales TO START.",
+  "icons": {
+    "16": "icons/june.png",
+    "48": "icons/june.png",
+    "128": "icons/june.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "lib/jquery-1.11.1.min.js","inject.js"
+      ]
+    }
+  ]
+}
